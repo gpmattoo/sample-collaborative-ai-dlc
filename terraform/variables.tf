@@ -313,3 +313,9 @@ variable "instances_workspace_gib" {
     error_message = "instances_workspace_gib must be a positive whole number of GiB."
   }
 }
+
+variable "enable_mcp_gateway" {
+  description = "Serve the built-in aidlc MCP tools through AgentCore Gateway (grant-verified per call) instead of the in-runtime MCP server. Requires network_mode = VPC."
+  type        = bool
+  default     = false
+}
